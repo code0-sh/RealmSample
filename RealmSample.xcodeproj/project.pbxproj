@@ -15,6 +15,7 @@
 		13B50B721D0554E20034E855 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13B50B701D0554E20034E855 /* Main.storyboard */; };
 		13B50B741D0554E20034E855 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B50B731D0554E20034E855 /* Assets.xcassets */; };
 		13B50B771D0554E20034E855 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13B50B751D0554E20034E855 /* LaunchScreen.storyboard */; };
+		13D86D4E1D069DDF007F2AAB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D86D4D1D069DDF007F2AAB /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		13B50B731D0554E20034E855 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13B50B761D0554E20034E855 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13B50B781D0554E20034E855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13D86D4D1D069DDF007F2AAB /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		C0B0B94AE66F25F7800B62CB /* Pods-RealmSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealmSample/Pods-RealmSample.release.xcconfig"; sourceTree = "<group>"; };
 		E5A2A9F571887A6152AB3CAA /* Pods-RealmSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmSample/Pods-RealmSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +69,7 @@
 			children = (
 				13B50B6C1D0554E20034E855 /* AppDelegate.swift */,
 				13B50B6E1D0554E20034E855 /* ViewController.swift */,
+				13D86D4D1D069DDF007F2AAB /* Item.swift */,
 				13B50B701D0554E20034E855 /* Main.storyboard */,
 				13B50B731D0554E20034E855 /* Assets.xcassets */,
 				13B50B751D0554E20034E855 /* LaunchScreen.storyboard */,
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13D86D4E1D069DDF007F2AAB /* Item.swift in Sources */,
 				130F7F331D064F6A0066CA63 /* Person.swift in Sources */,
 				13B50B6F1D0554E20034E855 /* ViewController.swift in Sources */,
 				130F7F371D0656BB0066CA63 /* Car.swift in Sources */,
