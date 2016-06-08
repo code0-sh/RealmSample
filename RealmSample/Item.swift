@@ -17,6 +17,9 @@ class Item: Object, Mappable {
     dynamic var lot = 1
     dynamic var price = 0
     dynamic var janCode = ""
+    override static func primaryKey() -> String? {
+        return "itemId"
+    }
     required convenience init?(_ map: Map) {
         self.init()
     }

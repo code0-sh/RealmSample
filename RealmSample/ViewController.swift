@@ -22,51 +22,10 @@ class ViewController: UIViewController {
         Alamofire.request(.GET, jsonUrl).responseJSON { response in
             if response.result.isSuccess {
                 if let itemDataArr: [Item] = Mapper<Item>().mapArray(response.result.value) {
-                    do {
-                        let realm = try Realm()
-                        realm.beginWrite()
-                        realm.deleteAll()
-                        for v in itemDataArr {
-                            realm.add(v)
-                        }
-                        try realm.commitWrite()
-                    } catch {
-                        // Error handling
-                    }
+                    ItemDAO.saveItem(itemDataArr)
                 }
             }
         }
-//        do {
-//// 登録
-////            let realm = try Realm(
-////                configuration: Realm.Configuration(inMemoryIdentifier: "TemporaryRealm")
-////            )
-//            let realm = try Realm()
-//            print(Realm.Configuration.defaultConfiguration.fileURL!)
-//            let car1 = Car(value: ["brand": "BMW", "year": 1980])
-//            let car2 = Car()
-//            car2.brand = "DeLorean"
-//            car2.name = "Outatime"
-//            car2.year = 1981
-//            // people
-//            let wife = Person()
-//            wife.name = "Jennifer"
-//            wife.cars.appendContentsOf([car1, car2])
-//            wife.age = 47
-//            let husband = Person(value: [
-//                "name": "Marty",
-//                "age": 47,
-//                "spouse": wife
-//                ])
-//            wife.spouse = husband
-//            try realm.write {
-//                realm.add(husband)
-//            }
-//        } catch let error as NSError {
-//            // Error handling
-//            print(error)
-//        }
-
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -79,8 +38,11 @@ class ViewController: UIViewController {
             for v in records {
                 print(v)
             }
+            if let data = realm.objectForPrimaryKey(Item.self, key: 24853) {
+                print("itemId:24853 \(data.name)")
+            }
         } catch {
-            // Error handling
+            print("検索に失敗しました。")
         }
     }
 }
