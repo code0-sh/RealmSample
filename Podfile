@@ -4,6 +4,7 @@ use_frameworks!
 
 target 'RealmSample' do
 	pod 'RealmSwift'
+	pod 'AlamofireObjectMapper'
 	pod 'ObjectMapper', '~> 1.1.5'
 	pod 'Alamofire', '~> 3.2.1'
 end

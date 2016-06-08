@@ -1,5 +1,5 @@
 //
-//  ItemDAO.swift
+//  AccessMapRecordDAO.swift
 //  RealmSample
 //
 //  Created by omura.522 on 2016/06/08.
@@ -9,16 +9,14 @@
 import Foundation
 import RealmSwift
 
-// クラス：Itemへのデータアクセス処理をまとめたクラス
-// 継承：Object
-class ItemDAO: Object {
+class AccessMapRecordDAO: Object {
     // 保存処理関数
-    static func saveItem(itemDataArr: [Item]) -> Void {
+    static func saveAccessMapRecord(accessMapRecords: List<AccessMapRecord>) -> Void {
         do {
             print(Realm.Configuration.defaultConfiguration.fileURL!)
             let realm = try Realm()
             realm.beginWrite()
-            for v in itemDataArr {
+            for v in accessMapRecords {
                 realm.add(v, update: true)
             }
             try realm.commitWrite()
