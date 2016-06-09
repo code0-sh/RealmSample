@@ -26,4 +26,16 @@ class ItemDAO: Object {
             print("保存処理に失敗")
         }
     }
+    // 取得関数
+    static func getItem(itemId: Int) -> Item? {
+        do {
+            let realm = try Realm()
+            if let data = realm.objectForPrimaryKey(Item.self, key: itemId) {
+                return data
+            }
+        } catch {
+            print("取得処理に失敗")
+        }
+        return nil
+    }
 }
