@@ -31,18 +31,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     func btnPressed(sender: AnyObject?) {
-        do {
-            let realm = try Realm()
-            let records: Results = realm.objects(Item)
-                                        .filter("itemCode BEGINSWITH '0'").sorted("itemCode")
-            for v in records {
-                print(v)
-            }
-            if let data = realm.objectForPrimaryKey(Item.self, key: 24853) {
-                print("itemId:24853 \(data.name)")
-            }
-        } catch {
-            print("検索に失敗しました。")
-        }
+        print(ItemDAO.getItem(24853)?.name)
     }
 }
