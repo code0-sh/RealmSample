@@ -7,16 +7,14 @@
 //
 import Foundation
 import ObjectMapper
-import AlamofireObjectMapper
 import RealmSwift
 
-class AccessMap: Object, Mappable {
-    dynamic var isUpdate = false
-    dynamic var recordCount = 0
-    var accessMapRecords = List<AccessMapRecord>()
-    dynamic var error: String?
-    required convenience init?(_ map: Map) {
-        self.init()
+class AccessMap: Mappable {
+    var isUpdate: Bool?
+    var recordCount: Int?
+    var accessMapRecords: [AccessMapRecord]?
+    var error: String?
+    required init?(_ map: Map) {
     }
     func mapping(map: Map) {
         isUpdate <- map["IsUpdate"]

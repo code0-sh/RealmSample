@@ -16,6 +16,7 @@
 		13C3FB891D07C1C800307680 /* AccessMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C3FB881D07C1C800307680 /* AccessMap.swift */; };
 		13C3FB8D1D07E2A600307680 /* AccessMapRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C3FB8C1D07E2A600307680 /* AccessMapRecord.swift */; };
 		13C3FB8F1D07E78200307680 /* AccessMapRecordDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C3FB8E1D07E78200307680 /* AccessMapRecordDAO.swift */; };
+		13C3FB911D09020500307680 /* AccessMapOuter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C3FB901D09020500307680 /* AccessMapOuter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		13C3FB881D07C1C800307680 /* AccessMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessMap.swift; sourceTree = "<group>"; };
 		13C3FB8C1D07E2A600307680 /* AccessMapRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessMapRecord.swift; sourceTree = "<group>"; };
 		13C3FB8E1D07E78200307680 /* AccessMapRecordDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessMapRecordDAO.swift; sourceTree = "<group>"; };
+		13C3FB901D09020500307680 /* AccessMapOuter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessMapOuter.swift; sourceTree = "<group>"; };
 		C0B0B94AE66F25F7800B62CB /* Pods-RealmSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealmSample/Pods-RealmSample.release.xcconfig"; sourceTree = "<group>"; };
 		E5A2A9F571887A6152AB3CAA /* Pods-RealmSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmSample/Pods-RealmSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +72,7 @@
 				13B50B6C1D0554E20034E855 /* AppDelegate.swift */,
 				13B50B6E1D0554E20034E855 /* ViewController.swift */,
 				13C3FB881D07C1C800307680 /* AccessMap.swift */,
+				13C3FB901D09020500307680 /* AccessMapOuter.swift */,
 				13C3FB8C1D07E2A600307680 /* AccessMapRecord.swift */,
 				13B50B701D0554E20034E855 /* Main.storyboard */,
 				13B50B731D0554E20034E855 /* Assets.xcassets */,
@@ -233,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13C3FB911D09020500307680 /* AccessMapOuter.swift in Sources */,
 				13C3FB8D1D07E2A600307680 /* AccessMapRecord.swift in Sources */,
 				13B50B6F1D0554E20034E855 /* ViewController.swift in Sources */,
 				13C3FB891D07C1C800307680 /* AccessMap.swift in Sources */,

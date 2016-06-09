@@ -8,9 +8,11 @@
 
 import UIKit
 import Alamofire
-import ObjectMapper
 import AlamofireObjectMapper
+import ObjectMapper
 import RealmSwift
+
+//import RealmSwift
 
 class ViewController: UIViewController {
     @IBOutlet weak var btn: UIButton!
@@ -20,28 +22,13 @@ class ViewController: UIViewController {
                       action: #selector(ViewController.btnPressed(_:)),
                       forControlEvents: .TouchUpInside)
         let jsonUrl = "http://164.70.8.70:10011/api/AccessMap/1f940027dc324dc8997e4fed9a510d02/21"
-        Alamofire.request(.GET, jsonUrl).responseJSON { response in
-            print(response)
-            
-//            if let accessMapRecords = response as! [String: AnyObject] {
-//                AccessMapRecordDAO.saveAccessMapRecord(accessMapRecords)
-//            }
-            
-//            if response.result.isSuccess {
-//                if let accessMapRecords: List<AccessMapRecord> = Mapper<AccessMapRecord>()
-//                                                                .mapArray(response.result.value) {
-//                    AccessMapRecordDAO.saveAccessMapRecord(accessMapRecords)
-//                }
-//            }
+        Alamofire.request(.GET, jsonUrl)
+                 .responseObject { (response: Response<AccessMapOuter, NSError>) in
+            let accessMapOuter = response.result.value
+            if let accessMapRecords = accessMapOuter?.accessMap?.accessMapRecords {
+                AccessMapRecordDAO.saveAccessMapRecord(accessMapRecords)
+            }
         }
-//        Alamofire.request(.GET, jsonUrl)
-//                 .responseObject { (response: Response<AccessMap, NSError>) in
-//            let accessMap = response.result.value
-//            print(accessMap?.recordCount)
-//            if let accessMapRecords = accessMap?.accessMapRecords {
-//                AccessMapRecordDAO.saveAccessMapRecord(accessMapRecords)
-//            }
-//        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -50,8 +37,8 @@ class ViewController: UIViewController {
         do {
             let realm = try Realm()
             let records: Results = realm.objects(AccessMapRecord)
-                                        //.filter("language == 0")
-                                        //.filter("isActive == true")
+                                        .filter("language == 1")
+                                        .filter("isActive == true")
                                         .sorted("exhibitionContentsId")
             for v in records {
                 print(v)

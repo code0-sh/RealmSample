@@ -11,7 +11,7 @@ import RealmSwift
 
 class AccessMapRecordDAO: Object {
     // 保存処理関数
-    static func saveAccessMapRecord(accessMapRecords: List<AccessMapRecord>) -> Void {
+    static func saveAccessMapRecord(accessMapRecords: [AccessMapRecord]) -> Void {
         do {
             print(Realm.Configuration.defaultConfiguration.fileURL!)
             let realm = try Realm()
