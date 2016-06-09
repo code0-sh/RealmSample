@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         // テーブル構造が変わったらschemaVersionを2、3と増やしていけば良い
-        let config = Realm.Configuration(schemaVersion: 6)
+        let config = Realm.Configuration(schemaVersion: 7)
         Realm.Configuration.defaultConfiguration = config
         return true
     }

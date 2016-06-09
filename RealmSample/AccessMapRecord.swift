@@ -16,7 +16,7 @@ class AccessMapRecord: Object, Mappable {
     dynamic var destinationName = ""
     dynamic var latitude = 0.0
     dynamic var longitude = 0.0
-    dynamic var secondDestinationName = 0.0
+    dynamic var secondDestinationName = ""
     dynamic var secondLatitude = 0.0
     dynamic var secondLongitude = 0.0
     dynamic var isActive = false
