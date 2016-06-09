@@ -12,8 +12,6 @@ import AlamofireObjectMapper
 import ObjectMapper
 import RealmSwift
 
-//import RealmSwift
-
 class ViewController: UIViewController {
     @IBOutlet weak var btn: UIButton!
     override func viewDidLoad() {
@@ -34,20 +32,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     func btnPressed(sender: AnyObject?) {
-        do {
-            let realm = try Realm()
-            let records: Results = realm.objects(AccessMapRecord)
-                                        .filter("language == 1")
-                                        .filter("isActive == true")
-                                        .sorted("exhibitionContentsId")
-            for v in records {
-                print(v)
-            }
-            if let data = realm.objectForPrimaryKey(AccessMapRecord.self, key: 21) {
-                print("exhibitionContentsId:21 \(data.destinationName)")
-            }
-        } catch {
-            print("検索に失敗しました。")
-        }
+        print(AccessMapRecordDAO.getItem(21)?.destinationName)
     }
 }
